@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Maintenance Plan Builder | Quick Property Maintenance</title>
+  <meta name="description" content="Build a property maintenance plan: property type, services, frequency, photos, address, and weekday timing.">
+  <link rel="stylesheet" href="/pm-preview-v3/css/styles.css">
+  
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "#business",
+  "name": "Quick Property Maintenance",
+  "alternateName": "Property maintenance (brand name pending)",
+  "description": "Property maintenance for properties in Mississauga and the Greater Toronto Area, including routine care and winter-related repairs.",
+  "telephone": "+1-416-900-7998",
+  "email": "info@quickfencerepair.ca",
+  "url": "/",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "3332 Mavis Rd",
+    "addressLocality": "Mississauga",
+    "addressRegion": "ON",
+    "postalCode": "L5C 1T8",
+    "addressCountry": "CA"
+  },
+  "areaServed": [
+    {"@type": "City", "name": "Mississauga"},
+    {"@type": "City", "name": "Oakville"},
+    {"@type": "City", "name": "Toronto"},
+    {"@type": "City", "name": "Brampton"},
+    {"@type": "City", "name": "Vaughan"},
+    {"@type": "City", "name": "Hamilton"},
+    {"@type": "AdministrativeArea", "name": "Greater Toronto Area"}
+  ],
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+    "opens": "07:00",
+    "closes": "19:00"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Property maintenance services",
+    "itemListElement": [
+      {"@type": "Service", "@id": "#service-property-maintenance", "name": "Property maintenance", "provider": {"@id": "#business"}, "areaServed": "Greater Toronto Area", "description": "Recurring and on-demand maintenance for properties in Mississauga and nearby GTA cities."},
+      {"@type": "Service", "@id": "#service-snow-removal", "name": "Snow removal", "provider": {"@id": "#business"}, "areaServed": "Greater Toronto Area", "description": "Seasonal snow clearing and ice control for driveways, walks, and lots, where this service is offered."},
+      {"@type": "Service", "@id": "#service-minor-repairs", "name": "Minor repairs", "provider": {"@id": "#business"}, "areaServed": "Greater Toronto Area", "description": "Small repair work on the property, scheduled on a weekday after a quote."}
+    ]
+  }
+}
+  </script>
+  <!-- Review / AggregateRating schema is a template only. Do not publish until real, policy-compliant reviews exist.
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "#business",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "REPLACE",
+    "reviewCount": "REPLACE",
+    "bestRating": "5"
+  }
+}
+</script>
+-->
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="rail">
+    <div class="wrap">
+      <span>3332 Mavis Rd, Mississauga, ON L5C 1T8</span>
+      <span>Mon–Fri 7:00 AM–7:00 PM · Closed Saturday and Sunday</span>
+      <span><strong>5-year warranty</strong> · $5 million liability insurance · WSIB coverage</span>
+    </div>
+  </div>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="wordmark" href="/pm-preview-v3/">
+        <span class="mark" aria-hidden="true">Q</span>
+        <span>Quick Property Maintenance
+          <small>Placeholder name · Mississauga</small>
+        </span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav class="nav" id="site-nav" aria-label="Primary">
+        <ul>
+            <li><a href="/pm-preview-v3/property-maintenance/">Maintenance</a></li>
+            <li><a href="/pm-preview-v3/snow-removal/">Snow</a></li>
+            <li><a href="/pm-preview-v3/plan/" aria-current="page">Plan builder</a></li>
+            <li><a href="/pm-preview-v3/for-managers/">Managers</a></li>
+            <li><a href="/pm-preview-v3/service-area/">Area</a></li>
+            <li><a href="/pm-preview-v3/about/">About</a></li>
+            <li><a href="/pm-preview-v3/faq/">FAQ</a></li>
+        </ul>
+      </nav>
+      <div class="hdr-actions">
+        <a class="phone" href="tel:+14169007998">416-900-7998</a>
+        <a class="btn" href="/pm-preview-v3/contact/">Get an instant quote</a>
+      </div>
+    </div>
+  </header>
+  <div class="winter">
+    <div class="wrap">For ice or snow damage on the property, use the <a href="/pm-preview-v3/contact/">quote form</a> or the <a href="/pm-preview-v3/plan/">plan builder</a>.</div>
+  </div>
+  <main id="main">
+    <section class="inner-hero">
+      <div class="wrap">
+        <p class="kicker">Maintenance plan builder</p>
+        <h1>Turn the property into a clear request</h1>
+        <p class="lede">Five steps: property type, services, frequency, photos, then address and timing. The last step shows a work-order style summary. Nothing is sent in this draft.</p>
+      </div>
+    </section>
+    <section class="section">
+      <div class="wrap" data-wizard>
+        <div class="wizard-card">
+        <div class="progress" aria-live="polite">
+          <div class="progress-bar"><i data-progress></i></div>
+          <p data-progress-label>Step 1 of 5</p>
+        </div>
+        <form class="quote" id="plan-form" method="post" action="#plan-form" enctype="multipart/form-data" novalidate>
+          <div class="wiz-pane" data-step="1">
+            <h2>1. Property type</h2>
+            <p class="hint">Choose the closest match. This is maintenance intake, not a property-management agreement.</p>
+            <label>What kind of property is this
+              <select name="property_type" required>
+                <option value="">Select a type</option>
+                <option>Apartment or condo building</option>
+                <option>Townhouse complex</option>
+                <option>Plaza or retail property</option>
+                <option>Rental house or small multi-unit</option>
+                <option>A single owned property</option>
+                <option>Other / not sure</option>
+              </select>
+            </label>
+            <div class="btn-row"><button class="btn" type="button" data-next>Continue</button></div>
+          </div>
+          <div class="wiz-pane" data-step="2">
+            <h2>2. Services to include</h2>
+            <p class="hint">Check every item that should be on this request. Fence, gate, welding, and chain-link work is scheduled through the related Quick Fence Repair practice when that is the work needed.</p>
+            <div class="choices">
+              <label class="choice"><input type="checkbox" name="services" value="Fences and gates"> Fences and gates</label>
+              <label class="choice"><input type="checkbox" name="services" value="Handyman repairs"> Handyman repairs</label>
+              <label class="choice"><input type="checkbox" name="services" value="Snow removal"> Snow removal</label>
+              <label class="choice"><input type="checkbox" name="services" value="Seasonal lights"> Seasonal lights</label>
+              <label class="choice"><input type="checkbox" name="services" value="Exterior upkeep"> Exterior upkeep</label>
+              <label class="choice"><input type="checkbox" name="services" value="Other / not sure"> Other / not sure</label>
+            </div>
+            <div class="btn-row" style="margin-top:1rem">
+              <button class="btn btn-navy" type="button" data-back>Back</button>
+              <button class="btn" type="button" data-next>Continue</button>
+            </div>
+          </div>
+          <div class="wiz-pane" data-step="3">
+            <h2>3. Frequency</h2>
+            <p class="hint">This is your preference for how often the work should be quoted. It is not a published route schedule.</p>
+            <label>How often should this work be planned
+              <select name="frequency" required>
+                <option value="">Select frequency</option>
+                <option>One-time visit</option>
+                <option>Seasonal (named seasons only)</option>
+                <option>Recurring weekday visits</option>
+                <option>Custom / I will describe it</option>
+              </select>
+            </label>
+            <label>Notes on timing or frequency
+              <textarea name="details" placeholder="Describe the work, access, and any seasonal pattern you want quoted."></textarea>
+            </label>
+            <div class="btn-row">
+              <button class="btn btn-navy" type="button" data-back>Back</button>
+              <button class="btn" type="button" data-next>Continue</button>
+            </div>
+          </div>
+          <div class="wiz-pane" data-step="4">
+            <h2>4. Photos of the property</h2>
+            <p class="hint">Show the area that needs work, plus access if it is tight or gated. Images only, if you have them.</p>
+            <label>Photos
+              <input type="file" name="photos" accept="image/jpeg,image/png,image/webp,image/heic" multiple>
+            </label>
+            <div class="btn-row">
+              <button class="btn btn-navy" type="button" data-back>Back</button>
+              <button class="btn" type="button" data-next>Continue</button>
+            </div>
+          </div>
+          <div class="wiz-pane" data-step="5">
+            <h2>5. Address, timing, and summary</h2>
+            <p class="wo-id">Draft work order · not submitted to a live desk</p>
+            <label>Full name
+              <input type="text" name="name" autocomplete="name" required>
+            </label>
+            <label>Phone
+              <input type="tel" name="phone" autocomplete="tel" required>
+            </label>
+            <label>Email
+              <input type="email" name="email" autocomplete="email" required>
+            </label>
+            <label>Property address
+              <input type="text" name="property_address" autocomplete="street-address" required>
+              <span class="hint">Street address of the property that needs work.</span>
+            </label>
+            <label>City
+              <input type="text" name="city" autocomplete="address-level2" required>
+            </label>
+            <label>Preferred timing
+              <select name="preferred_timing" required>
+                <option value="">Select timing</option>
+                <option>As soon as possible</option>
+                <option>This week</option>
+                <option>Next week</option>
+                <option>Specific weekday dates</option>
+              </select>
+              <span class="hint">Work is scheduled on weekdays only. Saturday and Sunday are not offered.</span>
+            </label>
+            <div class="summary" aria-live="polite">
+              <h3>Request summary</h3>
+              <dl>
+                <dt>Property type</dt><dd data-sum="ptype"></dd>
+                <dt>Services</dt><dd data-sum="services"></dd>
+                <dt>Frequency</dt><dd data-sum="freq"></dd>
+                <dt>Notes</dt><dd data-sum="details"></dd>
+                <dt>Address</dt><dd data-sum="address"></dd>
+                <dt>City</dt><dd data-sum="city"></dd>
+                <dt>Timing</dt><dd data-sum="timing"></dd>
+                <dt>Name</dt><dd data-sum="name"></dd>
+                <dt>Phone</dt><dd data-sum="phone"></dd>
+                <dt>Email</dt><dd data-sum="email"></dd>
+              </dl>
+            </div>
+            <div class="btn-row">
+              <button class="btn btn-navy" type="button" data-back>Back</button>
+              <button class="btn" type="submit">Submit plan request</button>
+            </div>
+            <p class="form-status" tabindex="-1">This draft form is not connected yet. Nothing was sent. A later version will email the office and can hand off to the booking flow.</p>
+          </div>
+        </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <footer class="site-footer">
+    <div class="wrap foot-grid">
+      <div>
+        <p class="ops-name">Quick Property Maintenance</p>
+        <p>Operations desk for property maintenance requests in the Greater Toronto Area. Brand name pending Eugene’s pick.</p>
+        <p>3332 Mavis Rd, Mississauga, ON L5C 1T8<br>
+        <a href="tel:+14169007998">416-900-7998</a><br>
+        <a href="mailto:info@quickfencerepair.ca">info@quickfencerepair.ca</a></p>
+        <p>Monday to Friday, 7:00 AM to 7:00 PM.<br>Closed Saturday and Sunday.</p>
+        <p class="btn-row">
+          <a class="btn" href="tel:+14169007998">Call the desk</a>
+          <a class="btn btn-ghost" href="#" data-retell="voice">Speak to live agent</a>
+          <a class="btn btn-ghost" href="#" data-retell="chat">Live text chat</a>
+        </p>
+      </div>
+      <div>
+        <h2>Request work</h2>
+        <ul class="foot-list">
+          <li><a href="/pm-preview-v3/plan/">Maintenance plan builder</a></li>
+          <li><a href="/pm-preview-v3/contact/">Work-order style quote</a></li>
+          <li><a href="/pm-preview-v3/for-managers/">For property managers</a></li>
+          <li><a href="/pm-preview-v3/property-maintenance/">Property maintenance</a></li>
+          <li><a href="/pm-preview-v3/snow-removal/">Snow removal</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Coverage</h2>
+        <ul class="foot-list">
+          <li>Mississauga</li>
+          <li>Oakville</li>
+          <li>Toronto</li>
+          <li>Brampton</li>
+          <li>Vaughan</li>
+          <li>Hamilton</li>
+          <li><a href="/pm-preview-v3/service-area/">Full service area</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Practice notes</h2>
+        <ul class="foot-list">
+          <li><a href="/pm-preview-v3/about/">About</a></li>
+          <li><a href="/pm-preview-v3/faq/">FAQ</a></li>
+          <li><a href="/pm-preview-v3/blog/">Blog</a></li>
+          <li>Related fence, gate, welding, and chain-link work: <a href="https://quickfencerepair.ca">QuickFenceRepair.ca</a></li>
+        </ul>
+        <p>This is a private draft. It is not registered, not deployed, and not intended for search engines.</p>
+      </div>
+    </div>
+    <p class="legal wrap">© Quick Property Maintenance. Address shown is 3332 Mavis Rd, Mississauga, ON L5C 1T8 only.</p>
+  </footer>
+  <div class="sticky-bar">
+    <div class="wrap">
+      <a class="btn" href="tel:+14169007998">Call 416-900-7998</a>
+      <a class="btn btn-ghost" href="#" data-retell="voice">Speak to live agent</a>
+      <a class="btn btn-ghost" href="#" data-retell="chat">Live text chat</a>
+      <a class="btn" href="/pm-preview-v3/contact/">Get an instant quote</a>
+    </div>
+  </div>
+  <div class="modal" id="retell-modal" hidden role="dialog" aria-modal="true" aria-labelledby="retell-title">
+    <div class="modal-card">
+      <h2 id="retell-title">Live desk (draft)</h2>
+      <p id="retell-modal-body"></p>
+      <p class="hint">When approved, the Retell AI widget will load from a dashboard script. No API keys are present in this draft.</p>
+      <button type="button" class="btn btn-navy modal-close">Close</button>
+    </div>
+  </div>
+  <script src="/pm-preview-v3/js/main.js"></script>
+</body>
+</html>
