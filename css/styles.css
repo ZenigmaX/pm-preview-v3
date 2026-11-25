@@ -391,10 +391,10 @@ textarea{min-height:6.5rem;resize:vertical}
   .trust-grid,.passes,.segments,.cal,.tiers,.pitch-grid,.foot-grid,.choices,.photo-led,.hero-grid,.pair-grid{grid-template-columns:1fr}
   .hdr-actions{display:none}
   .section{padding:3.2rem 0}
-  .hero-edit-inner{padding:2.6rem 0 2rem}
-  .hero-edit h1{font-size:2.15rem}
+  .hero-edit-inner{padding:1.35rem 0 7.4rem}
+  .hero-edit h1{font-size:1.95rem}
   .hero-edit-photo{min-height:16rem;max-height:20rem}
-  .hero-edit .lede{font-size:1rem}
+  .hero-edit .lede{font-size:.98rem;margin:0 0 1.3rem}
   .hero-edit .btn-row .btn-ghost{display:none}
   .rail .wrap span:first-child,.rail .wrap span:nth-child(3){display:none}
   .wordmark{font-size:1rem;min-width:0}
@@ -402,6 +402,34 @@ textarea{min-height:6.5rem;resize:vertical}
   .sticky-bar .wrap{display:grid;grid-template-columns:1fr 1fr;gap:.35rem;min-height:0;padding-bottom:.15rem}
   .sticky-bar .btn{max-width:none;width:100%;font-size:.78rem;padding:.55rem .4rem}
   body{padding-bottom:6.2rem}
-  .hero-facts{gap:.55rem 0;flex-direction:column}
+  .hero-facts{gap:.4rem 0;flex-direction:column;margin:1.15rem 0 0;padding:.85rem 0 0}
   .hero-facts li + li::before{display:none}
+}
+
+/* Plan builder follow-ups and required photos */
+.photo-need{
+  border:1px solid var(--line-gold);
+  background:var(--ivory);
+  padding:1rem 1.15rem;
+  margin:0 0 1.15rem;
+}
+.photo-need p{margin:0 0 .5rem;color:var(--ink)}
+.photo-need p:last-child{margin:0}
+.followup{margin:1.25rem 0 0;padding:1.2rem 0 0;border-top:1px solid var(--line)}
+.followup h3{font-size:1.3rem;margin:0 0 .45rem}
+.followup > .hint{margin:0 0 1rem}
+.followup[hidden],
+[data-fence-new][hidden],
+[data-fence-repair][hidden],
+[data-sum-fence][hidden],
+[data-sum-new][hidden],
+[data-sum-repair][hidden]{display:none !important}
+.field-error{color:#7A2E22;font-size:.9rem;margin:.4rem 0 0;display:none}
+.field-error.show{display:block}
+.choices.stack{grid-template-columns:1fr}
+.photo-count{margin:.4rem 0 0;font-size:.9rem;color:var(--mute)}
+@media (max-width:640px){
+  .choices.stack{grid-template-columns:1fr}
+  .wizard-card{padding:1.2rem 1rem}
+  .summary dl{grid-template-columns:1fr}
 }

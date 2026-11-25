@@ -160,10 +160,14 @@
           <label>Project details
             <textarea name="details" required placeholder="Describe the work and anything we should know about access."></textarea>
           </label>
-          <label>Photos of the property
-            <input type="file" name="photos" accept="image/jpeg,image/png,image/webp,image/heic" multiple>
-            <span class="hint">Optional but helpful. Images only, if you have them.</span>
+          <div class="photo-need">
+            <p>Photos are essential and must be sent with this request. The office cannot prepare a quote without photographs of the property and the work needed.</p>
+          </div>
+          <label>Photos of the property (required)
+            <input type="file" name="photos" accept="image/jpeg,image/png,image/webp,image/heic" multiple required>
           </label>
+          <p class="photo-count" data-photo-count>No photos attached yet. Photos are essential and must be sent.</p>
+          <p class="field-error" data-photo-error>Photos are essential and must be sent. Attach at least one photograph before you submit.</p>
           <button class="btn" type="submit">Submit quote request</button>
           <p class="form-status" tabindex="-1">This draft form is not connected yet. Nothing was sent. A later version will email the office and can hand off to the booking flow.</p>
         </form>
@@ -238,6 +242,7 @@
       <button type="button" class="btn btn-navy modal-close">Close</button>
     </div>
   </div>
+  <script src="/pm-preview-v3/js/retell-config.js"></script>
   <script src="/pm-preview-v3/js/main.js"></script>
 </body>
 </html>

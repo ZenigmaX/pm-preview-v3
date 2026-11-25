@@ -112,7 +112,7 @@
       <div class="wrap">
         <p class="kicker">Maintenance plan builder</p>
         <h1>Turn the property into a clear request</h1>
-        <p class="lede">Five steps: property type, services, frequency, photos, then address and timing. The last step shows a work-order style summary. Nothing is sent in this draft.</p>
+        <p class="lede">Five steps: property type, services, frequency, photos, then address and timing. If you include fences and gates, you will be asked a short set of follow-up questions. Photos are essential and must be sent with the request. The last step shows a work-order style summary. Nothing is sent in this draft.</p>
       </div>
     </section>
     <section class="section">
@@ -142,14 +142,176 @@
           <div class="wiz-pane" data-step="2">
             <h2>2. Services to include</h2>
             <p class="hint">Check every item that should be on this request. Fence, gate, welding, and chain-link work is scheduled through the related Quick Fence Repair practice when that is the work needed.</p>
-            <div class="choices">
+            <div class="choices" data-required-group="services">
               <label class="choice"><input type="checkbox" name="services" value="Fences and gates"> Fences and gates</label>
               <label class="choice"><input type="checkbox" name="services" value="Handyman repairs"> Handyman repairs</label>
               <label class="choice"><input type="checkbox" name="services" value="Snow removal"> Snow removal</label>
               <label class="choice"><input type="checkbox" name="services" value="Seasonal lights"> Seasonal lights</label>
               <label class="choice"><input type="checkbox" name="services" value="Exterior upkeep"> Exterior upkeep</label>
               <label class="choice"><input type="checkbox" name="services" value="Other / not sure"> Other / not sure</label>
+              <p class="field-error">Choose at least one service to continue.</p>
             </div>
+
+            <div class="followup" data-fence-followup hidden>
+              <h3>Fences and gates</h3>
+              <p class="hint">These questions apply only when fences and gates are part of the request.</p>
+              <div class="photo-need">
+                <p>Photos are essential and must be sent with this request. The office cannot prepare a quote without photographs of the property and the work needed.</p>
+                <p>You will attach those photos in step 4. Clear pictures of the fence line, posts, gates, and access are required before this request can be submitted.</p>
+              </div>
+
+              <div data-required-group="fence_work">
+                <p>Is this a repair or a new fence</p>
+                <div class="choices">
+                  <label class="choice"><input type="radio" name="fence_work" value="Repair"> Repair</label>
+                  <label class="choice"><input type="radio" name="fence_work" value="New fence"> New fence</label>
+                </div>
+                <p class="field-error">Choose repair or new fence.</p>
+              </div>
+
+              <div data-fence-new hidden>
+                <label>Type or material
+                  <select name="fence_material" required>
+                    <option value="">Select a material</option>
+                    <option>Wood</option>
+                    <option>Chain link</option>
+                    <option>Ornamental or metal</option>
+                    <option>Vinyl</option>
+                    <option>Mixed</option>
+                    <option>Not sure</option>
+                  </select>
+                </label>
+                <label>Height
+                  <select name="fence_height" required>
+                    <option value="">Select a height</option>
+                    <option>Under 4 feet</option>
+                    <option>4 feet</option>
+                    <option>5 feet</option>
+                    <option>6 feet</option>
+                    <option>Over 6 feet</option>
+                    <option>Not sure</option>
+                  </select>
+                </label>
+                <label>Approximate length
+                  <select name="fence_length" required>
+                    <option value="">Select a length</option>
+                    <option>Under 25 feet</option>
+                    <option>25 to 50 feet</option>
+                    <option>50 to 100 feet</option>
+                    <option>100 to 200 feet</option>
+                    <option>Over 200 feet</option>
+                    <option>Not sure</option>
+                  </select>
+                </label>
+                <label>Gate or gates needed
+                  <select name="fence_gates" required>
+                    <option value="">Select an option</option>
+                    <option>No gate</option>
+                    <option>One walk gate</option>
+                    <option>Two or more walk gates</option>
+                    <option>Driveway gate</option>
+                    <option>Walk gate and driveway gate</option>
+                    <option>Not sure</option>
+                  </select>
+                </label>
+              </div>
+
+              <div data-fence-repair hidden data-required-group="fence_repair">
+                <p>What needs repair</p>
+                <div class="choices">
+                  <label class="choice"><input type="checkbox" name="fence_repair" value="Boards"> Boards</label>
+                  <label class="choice"><input type="checkbox" name="fence_repair" value="Posts"> Posts</label>
+                  <label class="choice"><input type="checkbox" name="fence_repair" value="Gate"> Gate</label>
+                  <label class="choice"><input type="checkbox" name="fence_repair" value="Mesh or chain link"> Mesh or chain link</label>
+                  <label class="choice"><input type="checkbox" name="fence_repair" value="Welding"> Welding</label>
+                  <label class="choice"><input type="checkbox" name="fence_repair" value="Other"> Other</label>
+                </div>
+                <p class="field-error">Choose at least one item that needs repair.</p>
+              </div>
+
+              <label>Post size
+                <select name="fence_post_size" required>
+                  <option value="">Select a size</option>
+                  <option>4 by 4</option>
+                  <option>6 by 6</option>
+                  <option>Other</option>
+                  <option>Not sure</option>
+                </select>
+              </label>
+              <label>How many posts
+                <select name="fence_post_count" required>
+                  <option value="">Select a number</option>
+                  <option>1 or 2</option>
+                  <option>3 to 5</option>
+                  <option>6 to 10</option>
+                  <option>More than 10</option>
+                  <option>Not sure</option>
+                </select>
+              </label>
+              <div data-required-group="fence_post_condition">
+                <p>Post condition</p>
+                <div class="choices">
+                  <label class="choice"><input type="checkbox" name="fence_post_condition" value="Leaning"> Leaning</label>
+                  <label class="choice"><input type="checkbox" name="fence_post_condition" value="Loose"> Loose</label>
+                  <label class="choice"><input type="checkbox" name="fence_post_condition" value="Rotted"> Rotted</label>
+                  <label class="choice"><input type="checkbox" name="fence_post_condition" value="Solid"> Solid</label>
+                  <label class="choice"><input type="checkbox" name="fence_post_condition" value="Not sure"> Not sure</label>
+                </div>
+                <p class="field-error">Choose at least one post condition.</p>
+              </div>
+              <label>Approximate footage
+                <select name="fence_footage" required>
+                  <option value="">Select footage</option>
+                  <option>Under 25 feet</option>
+                  <option>25 to 50 feet</option>
+                  <option>50 to 100 feet</option>
+                  <option>100 to 200 feet</option>
+                  <option>Over 200 feet</option>
+                  <option>Not sure</option>
+                </select>
+              </label>
+              <label>Side-gate width
+                <select name="fence_side_access" required>
+                  <option value="">Select access</option>
+                  <option>Less than 3 feet</option>
+                  <option>3 to 4 feet</option>
+                  <option>Over 4 feet</option>
+                  <option>No side gate</option>
+                  <option>Not sure</option>
+                </select>
+              </label>
+              <label>Backyard access
+                <select name="fence_yard_access" required>
+                  <option value="">Select access</option>
+                  <option>Access from the street or side</option>
+                  <option>Only through the property</option>
+                  <option>Limited or shared access</option>
+                  <option>Not sure</option>
+                </select>
+              </label>
+              <label>Property setting
+                <select name="fence_setting" required>
+                  <option value="">Select a setting</option>
+                  <option>Residential</option>
+                  <option>Commercial</option>
+                  <option>Multi-unit</option>
+                  <option>Plaza or retail</option>
+                  <option>Mixed</option>
+                  <option>Not sure</option>
+                </select>
+              </label>
+              <label>Timeline
+                <select name="fence_timeline" required>
+                  <option value="">Select a timeline</option>
+                  <option>As soon as a weekday visit is available</option>
+                  <option>This week</option>
+                  <option>This month</option>
+                  <option>Planning ahead</option>
+                  <option>Not sure</option>
+                </select>
+              </label>
+            </div>
+
             <div class="btn-row" style="margin-top:1rem">
               <button class="btn btn-navy" type="button" data-back>Back</button>
               <button class="btn" type="button" data-next>Continue</button>
@@ -177,10 +339,15 @@
           </div>
           <div class="wiz-pane" data-step="4">
             <h2>4. Photos of the property</h2>
-            <p class="hint">Show the area that needs work, plus access if it is tight or gated. Images only, if you have them.</p>
-            <label>Photos
-              <input type="file" name="photos" accept="image/jpeg,image/png,image/webp,image/heic" multiple>
+            <div class="photo-need">
+              <p>Photos are essential and must be sent with this request. The office cannot prepare a quote without photographs of the property and the work needed.</p>
+              <p>Attach clear pictures of the work area, and of access if it is tight or gated. This step is required. You cannot continue or submit without at least one photo.</p>
+            </div>
+            <label>Photos of the property (required)
+              <input type="file" name="photos" accept="image/jpeg,image/png,image/webp,image/heic" multiple required>
             </label>
+            <p class="photo-count" data-photo-count>No photos attached yet. Photos are essential and must be sent.</p>
+            <p class="field-error" data-photo-error>Photos are essential and must be sent. Attach at least one photograph before you continue.</p>
             <div class="btn-row">
               <button class="btn btn-navy" type="button" data-back>Back</button>
               <button class="btn" type="button" data-next>Continue</button>
@@ -222,6 +389,7 @@
                 <dt>Services</dt><dd data-sum="services"></dd>
                 <dt>Frequency</dt><dd data-sum="freq"></dd>
                 <dt>Notes</dt><dd data-sum="details"></dd>
+                <dt>Photos</dt><dd data-sum="photos"></dd>
                 <dt>Address</dt><dd data-sum="address"></dd>
                 <dt>City</dt><dd data-sum="city"></dd>
                 <dt>Timing</dt><dd data-sum="timing"></dd>
@@ -229,7 +397,36 @@
                 <dt>Phone</dt><dd data-sum="phone"></dd>
                 <dt>Email</dt><dd data-sum="email"></dd>
               </dl>
+              <div class="sum-fence" data-sum-fence hidden>
+                <h3>Fences and gates</h3>
+                <dl>
+                  <dt>Repair or new</dt><dd data-sum="fence_work"></dd>
+                </dl>
+                <dl data-sum-new hidden>
+                  <dt>Material</dt><dd data-sum="fence_material"></dd>
+                  <dt>Height</dt><dd data-sum="fence_height"></dd>
+                  <dt>Approximate length</dt><dd data-sum="fence_length"></dd>
+                  <dt>Gates</dt><dd data-sum="fence_gates"></dd>
+                </dl>
+                <dl data-sum-repair hidden>
+                  <dt>What needs repair</dt><dd data-sum="fence_repair"></dd>
+                </dl>
+                <dl>
+                  <dt>Post size</dt><dd data-sum="fence_post_size"></dd>
+                  <dt>How many posts</dt><dd data-sum="fence_post_count"></dd>
+                  <dt>Post condition</dt><dd data-sum="fence_post_condition"></dd>
+                  <dt>Approximate footage</dt><dd data-sum="fence_footage"></dd>
+                  <dt>Side-gate width</dt><dd data-sum="fence_side_access"></dd>
+                  <dt>Backyard access</dt><dd data-sum="fence_yard_access"></dd>
+                  <dt>Property setting</dt><dd data-sum="fence_setting"></dd>
+                  <dt>Timeline</dt><dd data-sum="fence_timeline"></dd>
+                </dl>
+              </div>
             </div>
+            <div class="photo-need">
+              <p>Photos are essential and must be sent with this request. If no photographs are attached, you will be returned to the photo step.</p>
+            </div>
+            <p class="field-error" data-photo-error>Photos are essential and must be sent. Attach at least one photograph before this request can be submitted.</p>
             <div class="btn-row">
               <button class="btn btn-navy" type="button" data-back>Back</button>
               <button class="btn" type="submit">Submit plan request</button>
@@ -308,6 +505,7 @@
       <button type="button" class="btn btn-navy modal-close">Close</button>
     </div>
   </div>
+  <script src="/pm-preview-v3/js/retell-config.js"></script>
   <script src="/pm-preview-v3/js/main.js"></script>
 </body>
 </html>
